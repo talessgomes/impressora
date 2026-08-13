@@ -1,0 +1,95 @@
+:root {
+  --primary-blue: #107ce9;
+  --accent-blue: #0066cc;
+  --light-blue: #e6f0fa;
+  --white: #ffffff;
+  --gray-bg: #f4f7fa;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--gray-bg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+/* Header Responsivo */
+.header-container {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  cursor: pointer;
+  fontSize: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links span {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.nav-links span:hover {
+  color: var(--light-blue);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-blue);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    gap: 15px;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+}
