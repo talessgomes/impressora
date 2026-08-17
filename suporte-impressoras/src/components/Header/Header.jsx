@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import saipos from '../../assets/images/saipos.png'
+import saipos from '../../assets/images/logo/saipos.png'
 
 export default function Header({ setPage }) {
   const [isOpen, setIsOpen] = useState(false);
