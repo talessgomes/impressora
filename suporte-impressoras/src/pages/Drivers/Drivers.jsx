@@ -34,6 +34,10 @@ import tp500l from "../../assets/images/impression/Taicon/TP500L.png"
 import tatp510lw from "../../assets/images/impression/Taicon/TA-TP510LW.png"
 import tatp610lw from "../../assets/images/impression/Taicon/TA-TP610LW.png"
 import G250 from "../../assets/images/impression/Gertec/Gertec G250.png"
+import {
+  DriverImpression,
+  Img
+} from "./styled"
 
 export default function Drivers() {
   const driversData = [
@@ -106,7 +110,7 @@ export default function Drivers() {
     <div>
       <h2>Modelos e Drivers de Impressoras</h2>
       <p>Lista completa de drivers organizados por fabricante conforme o manual técnico:</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '15px' }}>
         {driversData.map(item => (
           <div key={item.brand} style={{ background: '#e6f0fa', borderLeft: '5px solid #0066cc', padding: '15px', borderRadius: '4px' }}>
             <h3 style={{ color: '#004080', marginBottom: '8px' }}>{item.brand}</h3>
@@ -114,9 +118,9 @@ export default function Drivers() {
               {item.models.map((model, idx) => (
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
                  {model.image && (
-                  <img src={model.image} alt={model.name} style={{ width: '40px', height: '40px', objectFit: 'contain' }}/>
+                  <Img src={model.image} alt={model.name} style={{ width: '40px', height: '40px', objectFit: 'contain' }}/>
                  )}
-                 <a href={model.url}><span>{model.name}</span></a>
+                 <DriverImpression href={model.url}><span>{model.name}</span></DriverImpression>
                 </div>
               ))}
             </ul>

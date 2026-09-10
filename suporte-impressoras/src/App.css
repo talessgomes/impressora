@@ -18,6 +18,7 @@ body {
   padding: 20px;
   background: var(--white);
   border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Header Responsivo */
@@ -43,12 +44,6 @@ body {
   gap: 20px;
 }
 
-.nav-links span {
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--white);
-  transition: color 0.3s;
-}
 
 .nav-links span:hover {
   color: var(--light-blue);
