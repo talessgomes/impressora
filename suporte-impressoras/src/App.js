@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home';
-import Troubleshooting from './pages/Troubleshooting/Troubleshooting';
+import { Troubleshooting } from './pages/Troubleshooting/Troubleshooting'
 import BrowserConfig from './pages/BrowserConfig/BrowserConfig';
 import Utilities from './pages/Utilities/Utilities';
 import Drivers from './pages/Drivers/Drivers';
