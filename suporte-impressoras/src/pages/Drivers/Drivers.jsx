@@ -34,7 +34,10 @@ import tp500l from "../../assets/images/impression/Taicon/TP500L.png"
 import tatp510lw from "../../assets/images/impression/Taicon/TA-TP510LW.png"
 import tatp610lw from "../../assets/images/impression/Taicon/TA-TP610LW.png"
 import G250 from "../../assets/images/impression/Gertec/Gertec G250.png"
+
+
 import {
+  DriversGrid,
   DriverImpression,
   Img
 } from "./styled"
@@ -110,7 +113,7 @@ export default function Drivers() {
     <div>
       <h2>Modelos e Drivers de Impressoras</h2>
       <p>Lista completa de drivers organizados por fabricante conforme o manual técnico:</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '15px' }}>
+      <DriversGrid>
         {driversData.map(item => (
           <div key={item.brand} style={{ background: '#e6f0fa', borderLeft: '5px solid #0066cc', padding: '15px', borderRadius: '4px' }}>
             <h3 style={{ color: '#004080', marginBottom: '8px' }}>{item.brand}</h3>
@@ -120,13 +123,13 @@ export default function Drivers() {
                  {model.image && (
                   <Img src={model.image} alt={model.name} style={{ width: '40px', height: '40px', objectFit: 'contain' }}/>
                  )}
-                 <DriverImpression href={model.url}><span>{model.name}</span></DriverImpression>
+                 <DriverImpression href={model.url} target="_blank"><span>{model.name}</span></DriverImpression>
                 </div>
               ))}
             </ul>
           </div>
         ))}
-      </div>
+      </DriversGrid>
     </div>
   );
 }

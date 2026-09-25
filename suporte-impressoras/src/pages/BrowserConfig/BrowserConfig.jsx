@@ -1,3 +1,6 @@
+import browserImg from "../../assets/images/browser/browser.png"
+import {Img} from "./styled"
+
 export default function BrowserConfig() {
   return (
     <div>
@@ -8,6 +11,7 @@ export default function BrowserConfig() {
         <li>Acesse a configuração de <strong>Downloads</strong>.</li>
         <li>Desmarque a opção <strong>"Perguntar onde salvar cada arquivo antes de fazer download"</strong>.</li>
       </ul>
+      <Img src={browserImg}/>
     </div>
   );
 }
