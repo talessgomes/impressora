@@ -12,8 +12,11 @@ export const ImgSpooler = styled.img `
     margin: 15px 0;
     border-radius: 8px;
     margin: 0px 0px 0px 70px;
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
     &:hover {
-        transform: scale(1.05);
+        opacity: 1;
+        filter: brightness(1.05);
+        transform: scale(1.02);
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         cursor: pointer;
     }
@@ -36,10 +39,29 @@ export const ImgLine = styled.img `
     width: 100%;
     margin: 15px 0;
     border-radius: 8px;
-
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
     &:hover {
-        transform: scale(1.05);
+        opacity: 1;
+        filter: brightness(1.05);
+        transform: scale(1.02);
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         cursor: pointer;
     }
+`
+
+export const ImgMacro = styled.img`
+  width: 50%;
+  margin: 15px 0;
+  border-radius: 10px;
+  opacity: 0.9;
+  filter: brightness(0.95);
+  transition: opacity 0.3s ease, filter 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+    filter: brightness(1.05);
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
 `

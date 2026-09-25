@@ -4,7 +4,8 @@ import {
   SecondSection, 
   ThirdSection,
   ImgSpooler,
-  ImgLine} from "./styled";
+  ImgLine,
+  ImgMacro} from "./styled";
 import services from "../../assets/images/troubleshooting/services.png";
 import pageFail from "../../assets/images/troubleshooting/pageFail.png";
 import lineImpression from "../../assets/images/troubleshooting/lineImpression.png";
@@ -41,7 +42,7 @@ export const Troubleshooting = () => {
              solicite que o cliente troque a porta USB em que a impressora está conectada ao PC,
               reiniciando e reconectando todos os cabos da impressora. Macro abaixo.
           </p>
-          <img src={pageFail} alt="Macro de página teste não saiu" />
+          <ImgMacro src={pageFail} alt="Macro de página teste não saiu" />
 
       </FirstSection>
       <SecondSection>
@@ -56,7 +57,7 @@ export const Troubleshooting = () => {
              após, vá em ‘Windows &gt; Serviços’ pesquise por spooler de impressão e pause o serviço, depois,
              abra a pasta C:\Windows\System32\spool\PRINTERS, delete todos os documentos e inicie novamente o serviço de spooler.
            </p>
-           <img src={pageFail} alt="Macro de página teste não saiu" />
+           <ImgMacro src={pageFail} alt="Macro de página teste não saiu" />
            <p>
             Caso o ip da porta da impressora esteja diferente da do ip do autoteste, 
             realize a mudança do ip na porta da impressora clicando em ‘Propriedades da impressora &gt; Portas &gt; Configurar Porta’.

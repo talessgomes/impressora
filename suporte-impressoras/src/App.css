@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--gray-bg);
+  padding-top: 80px;
 }
 
 .container {
@@ -21,16 +22,22 @@ body {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Header Responsivo */
+
 .header-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
   background-color: var(--primary-blue);
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: relative;
 }
 
 .logo {
@@ -42,6 +49,7 @@ body {
 .nav-links {
   display: flex;
   gap: 20px;
+  white-space: nowrap;
 }
 
 
@@ -58,8 +66,11 @@ body {
   cursor: pointer;
 }
 
-/* Responsividade para Telas Menores (Celulares) */
 @media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
   .hamburger {
     display: block;
   }
